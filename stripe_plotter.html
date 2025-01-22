@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lustre-stripe-plotter</title>
+</head>
+<body style="padding: 0.5rem;">
+    <h2 style="margin: 0 0 0.5rem 0; ">Lustre Stripe Plotter - <a style="font-size: medium" href="https://github.com/HewlettPackard/lustre-stripe-plotter">original source</a></h2>
+    <p>Paste output of "lfs getstripe -y"</p>
+
+    <form action="/"  method="post">
+        <textarea name="input_yaml" style="background-color: ghostwhite;width: 100%; height: 30vh; padding:0.5rem">{{clean_yaml}}</textarea>
+        <button type="submit" style="margin:1rem 0; font-size: medium;">Generate Plot</button>
+    </form>
+    <img src="data:image/png;base64,{{ image_data }}" style="padding: 0.5rem 0;">
+</body>
+</html>
